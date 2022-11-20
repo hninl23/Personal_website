@@ -1,0 +1,219 @@
+/*This select everything on the page*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    background-color: #F3F3F3;
+    overflow-x: hidden;
+}
+
+/*creating variables to use throughout the css by doing root(similar to class maybe*/
+:root{
+    --main-color: #f8b281;
+    --secondary-color: #1b1b1b;
+}
+
+/*adding custom font*/
+
+@font-face {
+    font-family: "foxy";
+    src: url(/assets/stone\ orgonite.woff);
+}
+
+section {
+    padding: 1.5%;
+}
+
+h2 {
+    font-size: 2.5rem; /* rem adapts to diff screen sizes*/
+    line-height: 125%;
+    padding: 1rem 0rem;
+}
+
+h3{
+    font-size: 1.25rem;
+    line-height: 125%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav svg{
+    cursor: pointer;
+    z-index: 10;
+}
+
+.links{
+    /*display: none; getting rid of the nav bar link*/
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(100%);
+}
+
+.links a{
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    margin-left: 0.1rem;
+    font-size: 1rem;
+    font-family: "foxy", sans-serif;
+}
+.logo img{
+    width: 5rem;
+}
+
+.front-page{
+    min-height: 100vh; /*min-height will stretch to whatever height your screen have*/
+   color: white;
+}
+
+.selling-point {
+    margin-top: 25vh;
+    font-family: "foxy" , sans-serif;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, .50);
+    text-align: center;
+}
+.selling-point h3{
+    font-family: sans-serif;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.49);
+}
+
+.ctas {
+    margin-top: 2rem;
+}
+.ctas button{
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.09);
+    margin: 1rem;
+    margin: 1rem;
+}
+
+.ctas-main{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+  
+}
+
+.ctas-sec{
+    background-color: #2F4858;
+    color: white;
+}  
+
+.hero{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.classes {
+    color: #504538;
+    text-align: center;
+    font-family: "foxy", sans-serif;
+}
+
+.projects img{
+    width: 20%;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    
+}
+
+.virus, 
+.weather, 
+.random {
+    position: relative;
+}
+
+.projects h3{
+    position: absolute;
+    color: #504538;
+    text-shadow: 0px 2px 12px rgba(0, 0, 0, .409);
+    bottom: 10%;
+    left: 50%;
+    right: inherit;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.about {
+    color: #504538;
+}
+
+.about h2{
+    font-family: "foxy" , sans-serif;
+    text-align: center;
+}
+.about p {
+    line-height: 150%;
+    font-size: 1.2rem;
+}
+
+.about img{
+    width: 30%;
+    margin-top: 2rem;
+    margin-right: 0;
+    border-radius: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        padding: 10;
+    }
+    .projects {
+        display: flex;
+        gap: 2rem;
+    }
+    .projects img {
+        width: 80%;
+    }
+    .about {
+        display: flex;
+        gap: 5rem;
+        justify-content: space-between;
+    }
+    .about img{
+        width: 70%;
+    }
+
+    .about h2{
+        text-align: start;
+    }
+}
+
+
+
+
+
+
